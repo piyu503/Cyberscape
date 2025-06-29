@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyberscape - Normal Mode</title>
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            font-family: monospace;
+            color: #0ff;
+        }
+        #ui {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        #buttons {
+            margin-top: 8px;
+        }
+        button {
+            background: #000;
+            color: #0ff;
+            border: 1px solid #0ff;
+            padding: 5px 10px;
+            margin: 3px;
+            cursor: pointer;
+        }
+        canvas {
+            background: #111;
+            border: 2px solid #0ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div>Player Health: <span id="playerHealth">100</span></div>
+        <div>System Health: <span id="systemHealth">50</span></div>
+        <div>Keys: <span id="keys">0</span></div>
+        <div>Shards Delivered: <span id="shards">0</span></div>
+        <div>High Score: <span id="highScore">0</span></div>
+        <div id="buttons">
+            <button onclick="pauseGame()">Pause</button>
+            <button onclick="resumeGame()">Resume</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+    </div>
+    <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+    <script src="game.js"></script>
+</body>
+</html>
